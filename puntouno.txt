@@ -1,0 +1,62 @@
+import java.util.Scanner;
+
+//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
+// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+public class puntouno {
+    public static void main(String[] args) {
+
+        int a;
+        int b;
+        int c;
+
+        System.out.println("Digita tres numeros enteros");
+        System.out.println("Ingrese un numero (A)");
+        Scanner scannerNumeroA = new Scanner(System.in);
+        a = scannerNumeroA.nextInt();
+
+        //System.out.println("Este es el numero A");
+        //System.out.println(a);
+
+        //Inicializar valores para b
+
+        System.out.println("Ingrese un numero (B)");
+        Scanner scannerNumeroB = new Scanner(System.in);
+        b = scannerNumeroB.nextInt();
+
+        //Inicializar valores para c
+
+        System.out.println("Ingrese un numero (C)");
+        Scanner scannerNumeroC = new Scanner(System.in);
+        c = scannerNumeroC.nextInt();
+
+        //SI A=B=C  ESCRIBIR "INGRESAR TRES VALORES DIFERENTES"
+
+        if (a== b | a==c | b==c) {
+                System.out.println("ingrese tres numeros enteros diferentes");
+        }
+
+        else {
+            // Determinar el número mayor
+            int mayor = a;
+            if (b > mayor) {
+                mayor = b;
+            }
+            if (c > mayor) {
+                mayor = c;
+            }
+
+            // Determinar el número menor
+            int menor = a;
+            if (b < menor) {
+                menor = b;
+            }
+            if (c < menor) {
+                menor = c;
+            }
+
+            // Mostrar resultados
+            System.out.println("El numero mayor es: " + mayor);
+            System.out.println("El numero menor es: " + menor);
+        }
+    }
+}
